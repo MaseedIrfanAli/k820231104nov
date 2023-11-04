@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: draining-node-test-deployment
+  lablels:
+    app: frontend
+spec:
+  replicas: 2
+  selector:
+    matchlabels:
+      app: frontend
+  templates:
+    metadata:
+      lablels:
+        app: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80

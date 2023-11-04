@@ -1,0 +1,13 @@
+apiVesrion: v1
+kind: Pod
+metadata:
+  name: draining-node-test-pod
+  lablels:
+    tier: frontend
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  restartPolicy: onFailure
