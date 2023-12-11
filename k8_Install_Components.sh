@@ -10,7 +10,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 # we should maintain same versions for kubelet kubeadm and kubectl
 sudo apt-get update
 sudo apt-get install -y kubelet=1.28.0-1.1 kubeadm=1.28.0-1.1 kubectl=1.28.0-1.1
-sudo apt-mark hold kubelet kubeadm kubectl7. Create the actual cluster
+sudo apt-mark hold kubelet kubeadm kubectl
 kubeadm init --pod-network-cidr=192.168.0.0/16
 
 # Note - Notedown the Command to join cluster
